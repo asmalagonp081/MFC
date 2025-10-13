@@ -1,0 +1,15 @@
+# Ignorar ejecutables
+experiment_A
+experiment_B
+
+# Archivos objeto y módulos de Fortran
+*.o
+*.mod
+
+# Archivos de respaldo y temporales
+*~
+*.bak
+*.tmp
+
+# Otros ejecutables generados
+a.out

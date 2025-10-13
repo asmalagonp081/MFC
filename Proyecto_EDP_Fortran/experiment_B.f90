@@ -1,7 +1,6 @@
 program experiment_B
   use utils_solver
   implicit none
-  integer, parameter :: dp = kind(1.0d0)
   integer :: i, n, m, nt
   real(dp) :: L, alpha, T, h, k, lambda
   real(dp), allocatable :: x(:), u(:), u_new(:), a(:), b(:), c(:), rhs(:)
