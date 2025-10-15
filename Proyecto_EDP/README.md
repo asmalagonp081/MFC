@@ -1,12 +1,13 @@
 # Proyecto EDP Fortran
 
-Este proyecto implementa la resolución numérica de una ecuación en derivadas parciales (EDP) usando el método de Crank-Nicolson en Fortran. Incluye dos experimentos principales para analizar el comportamiento del método bajo diferentes condiciones.
+Este proyecto implementa la resolución numérica de una ecuación en derivadas parciales (EDP) usando el método de Crank-Nicolson en Fortran. Incluye dos experimentos principales para analizar el comportamiento del método bajo diferentes condiciones, y un último código que resuelve la ecuación usando el método de difrencias finitas hacia adelante. 
 
 ## Estructura del proyecto
 
 - **experiment_A.f90**: Ejecuta el Experimento A, donde el paso temporal `k` es fijo.
 - **experiment_B.f90**: Ejecuta el Experimento B, donde el parámetro `λ` es fijo.
 - **utils_solver.f90**: Contiene el módulo `utils_solver` con el método de Thomas para resolver sistemas tridiagonales.
+- **calor_1d.f90** y **calor_1d.cc**
 - **.gitignore**: Archivos y ejecutables ignorados por git.
 
 ## Compilación
@@ -14,12 +15,12 @@ Este proyecto implementa la resolución numérica de una ecuación en derivadas 
 Desde la terminal, ejecuta:
 
 ```bash
-# Compilar tus experimentos originales
+# Compilar experimentos realizados con CN
 gfortran -c utils_solver.f90
 gfortran utils_solver.o experiment_A.f90 -o experiment_A
 gfortran utils_solver.o experiment_B.f90 -o experiment_B
 
-# Compilar nueva implementación del método explícito 
+# Compilar implementación del método explícito 
 gfortran -O3 -o heat_fortran calor_1d.f90
 g++ -std=c++17 -O3 -o heat_cpp calor_1d.cc
 
