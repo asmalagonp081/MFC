@@ -275,13 +275,16 @@ program main
   print '(A)', "    m       Nodos      nt        k          Ops·10⁶   Tiempo(s)   Memoria(KB)"
   print '(A)', "  ------  ---------  --------  ----------  ---------  ---------  ------------"
   
-  do experiment = 1, 5
+  do experiment = 1, 8
     select case(experiment)
       case(1); m = 100
       case(2); m = 200
       case(3); m = 500
       case(4); m = 1000
       case(5); m = 2000
+      case(6); m = 3000
+      case(7); m = 4000
+      case(8); m = 1500
     end select
     
     h = L / real(m, dp)

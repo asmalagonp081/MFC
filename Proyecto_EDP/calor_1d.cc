@@ -234,7 +234,7 @@ void experiment_performance() {
     print_header("EXPERIMENTO 3: ANÁLISIS DE RENDIMIENTO");
     cout << "Probando mallas muy refinadas (λ = 0.45)\n" << endl;
     
-    vector<int> m_values = {100, 200, 500, 1000, 2000};
+    vector<int> m_values = {100, 200, 500, 1000, 1500, 2000, 3000, 4000};
     double lambda = 0.45;
     
     cout << left << setw(10) << "m"
