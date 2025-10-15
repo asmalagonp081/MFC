@@ -19,10 +19,15 @@ gfortran -c utils_solver.f90
 gfortran utils_solver.o experiment_A.f90 -o experiment_A
 gfortran utils_solver.o experiment_B.f90 -o experiment_B
 
+# Compilar nueva implementación del método explícito 
+gfortran -O3 -o heat_fortran calor_1d.f90
+g++ -std=c++17 -O3 -o heat_cpp calor_1d.cc
+
 # Ejecutar
 ./experiment_A
 ./experiment_B
-./heat_explicit
+./heat_fortran
+./heat_cpp
 ```
 
 
